@@ -1,4 +1,6 @@
 @use './reset';
-@use './components/header';
+@use './var';
+@use './components/body';
 @use './components/main';
-@use './components/footer';
+@use './components/btnCarousel';
+@use './components/carousel';

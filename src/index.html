@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./scss/index.scss">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello Parcel</p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="./scss/index.scss" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script defer type="module" src="../js/app.js"></script>
+        <title>Yann Letouzey</title>
+    </head>
+    <body>
+        <main id="main" class="main">
+            <section id="main__container--slider" class="main__container--slider">
+                <div id="main__container--carousel" class="main__container--carousel">
+                    <div class="main__container--carousel-face main__container--carousel-face-front" id="main__container--carousel-face"></div>
+                    <div class="main__container--carousel-face main__container--carousel-face-left"></div>
+                    <div class="main__container--carousel-face main__container--carousel-face-back"></div>
+                    <div class="main__container--carousel-face main__container--carousel-face-right"></div>
+                    <div id="face-ground" class="face-ground"></div>
+                </div>
+                <div class="buttons">
+                    <button id="prev" class="carousel-prev btn">
+                        <svg id="square-prev" class="square" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51 51H1V26V1H51V51Z" stroke="#ceafaf" stroke-width="1"/>
+                        </svg>
+                        <svg id="arrow-prev" class="arrow" width="62" height="24" viewBox="0 0 67 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M-7.6294e-06 12H22.5714H45.1429V2L60 12L45.1429 22V17.6958" stroke="#ceafaf" stroke-width="1"/>
+                        </svg>
+                    </button>
+                    <button id="next" class="carousel-next btn">
+                        <svg id="square-next" class="square" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M51 51H1V26V1H51V51Z" stroke="#ceafaf" stroke-width="1"/>
+                        </svg>
+                        <svg id="arrow-next" class="arrow" width="62" height="24" viewBox="0 0 67 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M-7.6294e-06 12H22.5714H45.1429V2L60 12L45.1429 22V17.6958" stroke="#ceafaf" stroke-width="1"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
+    
