@@ -1,58 +1,69 @@
 @use '../var';
 
-.btn {
-  width: var.$size-btn;
-  height: var.$size-btn;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-}
-.carousel-prev {
-  transform: rotateZ(180deg);
-}
-#square-prev path {
-  stroke-dasharray: var.$stroke-square;
-}
-.btn:hover #square-prev path {
-  stroke-dashoffset: var.$stroke-square;
-}
-#arrow-prev path, #arrow-next path {
-  stroke-dasharray: var.$stroke-arrow;
-  stroke-dashoffset: var.$stroke-arrow;
-}
-#square-next path {
-  stroke-dasharray: var.$stroke-square;
-}
-.btn:hover #square-next path {
-  stroke-dashoffset: var.$stroke-square;
-}
-#square-prev,
-#square-next {
-  position: absolute;
-}
-#square-prev{
-  transform: translate(-50%, -50%) rotateZ(180deg);
-}
-#square-next{
-  transform: translate(-50%, -50%) rotateY(180deg);
-}
-#arrow-prev,
-#arrow-next {
-  position: absolute;
-  --pos-x: calc((-50%) - 5px);
-  transform: translate(var(--pos-x), -50%);
-  transform: translate(var(--pos-x), -50%);
-}
-.btn:hover #square-next path,
-.btn:hover #arrow-next path,
-.btn:hover #square-prev path,
-.btn:hover #arrow-prev path {
-  transition-duration: 0.5s;
-}
-.btn:hover #arrow-prev path,
-.btn:hover #arrow-next path {
-  stroke-dashoffset: 0;
-  transition-delay: 0.2s;
-  --pos-x: calc((+10%));
-  transform: translateX(var(--pos-x));
+.button{
+  width: var.$width;
+  display: flex;
+  justify-content: space-around;
+  @media screen and (min-width: 620px) {
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+  }
+  &__btn {
+    width: var.$size-btn;
+    height: var.$size-btn;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    &:hover #square-prev path {
+      stroke-dashoffset: var.$stroke-square;
+    }
+    &:hover #square-next path {
+      stroke-dashoffset: var.$stroke-square;
+    }
+    &:hover #square-next path,
+    &:hover #arrow-next path,
+    &:hover #square-prev path,
+    &:hover #arrow-prev path {
+      transition-duration: 0.5s;
+    }
+    &:hover #arrow-prev path,
+    &:hover #arrow-next path {
+      stroke-dashoffset: 0;
+      transition-delay: 0.2s;
+      --pos-x: calc((+10%));
+      transform: translateX(var(--pos-x));
+    }
+  }
+  &__prev {
+    transform: rotateZ(180deg);
+  }
+  #square-prev path {
+    stroke-dasharray: var.$stroke-square;
+  }
+  #arrow-prev path, #arrow-next path {
+    stroke-dasharray: var.$stroke-arrow;
+    stroke-dashoffset: var.$stroke-arrow;
+  }
+  #square-next path {
+    stroke-dasharray: var.$stroke-square;
+  }
+  
+  #square-prev,
+  #square-next {
+    position: absolute;
+  }
+  #square-prev{
+    transform: translate(-50%, -50%) rotateZ(180deg);
+  }
+  #square-next{
+    transform: translate(-50%, -50%) rotateY(180deg);
+  }
+  #arrow-prev,
+  #arrow-next {
+    position: absolute;
+    --pos-x: calc((-50%) - 5px);
+    transform: translate(var(--pos-x), -50%);
+    transform: translate(var(--pos-x), -50%);
+  }
 }

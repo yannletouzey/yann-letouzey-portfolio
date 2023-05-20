@@ -1,6 +1,6 @@
 @use '../var';
 
-.main__container--slider {
+.container {
     width: 100%;
     max-width: calc(var.$width * 2);
     height: 28rem;
@@ -10,31 +10,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-}
-.main__container--carousel {
-  margin: 1.5rem auto;
-  transform-style: preserve-3d;
-  width: 100%;
-  max-width: var.$width;
-  height: var.$height;
-}
-.main__container--carousel-face {
-  background-color: #ff9a9a7e;
-  position: absolute;
-  width: var.$width;
-  height: var.$height;
-  transform-style: preserve-3d;
-}
-.btn {
-  margin: 0 2rem;
-}
-.face-ground{
-  position: absolute;
-  width: var.$width;
-  height: var.$width;
-  background-color: white;
-  opacity: 0.2;
-  left: 50%;
-  transform: rotateX(90deg) translateX(-50%) translateZ(-14rem);
-  box-shadow: 0px 0px 60px 60px #fff;
+    @media screen and (min-width: 620px) {
+      height: var.$height;
+    }
+    &__carousel {
+      transform-style: preserve-3d;
+      width: 100%;
+      max-width: var.$width;
+      height: var.$height;
+    }
+    &__carousel-face {
+      background-color: var.$background-color-carousel;
+      position: absolute;
+      width: var.$width;
+      height: var.$height;
+      transform-style: preserve-3d;
+      border: 1px solid var.$border-color-carousel;;
+    }
+    &__carousel-glow-ground{
+      position: absolute;
+      width: var.$width;
+      height: var.$width;
+      background-color: white;
+      opacity: 0.2;
+      left: 50%;
+      transform: rotateX(90deg) translateX(-50%) translateZ(-14rem);
+      box-shadow: 0px 0px 60px 60px #fff;
+    }
 }

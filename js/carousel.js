@@ -1,7 +1,7 @@
 export const carousel = () => {
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
-  const carousel = document.getElementById("main__container--carousel");
+  const carousel = document.getElementById("container__carousel");
   const data = carousel.clientWidth
   const faces = 4;
   const offsetFace = ((data / 2) / 16);
@@ -24,7 +24,7 @@ export const carousel = () => {
     deg += degValue;
     slide(carousel);
   });
-  const allFaces = document.querySelectorAll(".main__container--carousel-face");
+  const allFaces = document.querySelectorAll(".container__carousel-face");
   
   for (let index = 0; index < faces; index++) {
     const element = allFaces[index];
