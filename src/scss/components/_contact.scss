@@ -3,14 +3,21 @@
 .header__contact {
     position: absolute;
     height: var.$sizes-cube;
-    width: calc(var.$sizes-cube * 2);
+    width: calc(var.$sizes-cube * 3.5);
     left: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     &.is-opened {
         transition-duration: var.$duration-animation-button-header;
-        transform: translateX(- calc(var.$sizes-cube * 2));
+        transform: translateX(- calc(var.$sizes-cube * 3.5));
+    } 
+    &.is-closed {
+        transition-duration: var.$duration-animation-button-header;
+        transform: translateX(0);
+    }
+    @media screen and (min-width: 50rem) {
+        transform: translateX(- calc(var.$sizes-cube * 3.5));
     }
     &--cube {
         width: var.$sizes-cube;

@@ -14,6 +14,14 @@
         font-size: 1.6rem;
         padding: 1rem 0 0.5rem 2rem;
         text-transform: uppercase;
+        &.is-opened {
+            transition-duration: var.$duration-animation-button-header;
+            transform: translateX(- calc(var.$sizes-cube * 3.5));
+        }  
+        &.is-closed {
+            transition-duration: var.$duration-animation-button-header;
+            transform: translateX(0);
+        }  
         @media screen and (min-width: 22rem) {
             font-size: 1.8rem;
         }
@@ -21,7 +29,7 @@
             font-size: 2.2rem;
         }    
         @media screen and (min-width: 50rem) {
-            font-size: 4rem;
+            font-size: 3rem;
         }
     }
     @media screen and (min-width: 39rem) {
