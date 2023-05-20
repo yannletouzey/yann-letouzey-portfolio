@@ -1,82 +1,87 @@
 @use '../var';
 
-.header__icon{
-    border: 1px solid red;
-    --width-burger: 1rem;
-    position: relative;
-    width: 1.8rem;
-    height: 1rem;
-    margin-right: 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    display: block;
-    background-color: var.$background-color;
-    span, 
-    span::before, 
-    span::after{
-        transition: transform 0.5s;
-    }
-    span{
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%) translateY(-50%);
-    }
-    span, 
-    span::before, 
-    span::after{
-        position: absolute;
-        display: block;
-        width: 1.5rem;
-        height: 0.1rem;
-        background-color: var.$color;
-    }
-    span::before, 
-    span::after{
-        content: "";
-        top: 0;
-        left: 0;
-        transform-origin: 50% 50%;
-    }
-    span::before{
-        transform: translateY(-5px);
-        border-radius: 1px 1px 0 0;
-    }
-    span::after{
-        transform: translateY(5px);
-        border-radius: 0 0 1px 1px;
-    }
-    &:hover span::before{
-        transform: translateY(-7px);
-        transition-timing-function: cubic-bezier(.51,2.32,.85,.55);
-    }
-    &:hover span::after{
-        transform: translateY(7px);
-        transition-timing-function: cubic-bezier(.51,2.32,.85,.55);
-    }
-    @media screen and (min-width: 50rem) {
-        display: none;
-    }
+.header__container{
     &.is-opened {
-        transform-origin: center;
         transition-duration: var.$duration-animation-button-header;
-        transform: rotate(180deg) translateX(-0.5rem);
+        transform: translateX(- calc(var.$sizes-cube * 2));
+    }
+    .header__icon{
+        cursor: pointer;
+        position: relative;
+        width: 1.8rem;
+        height: 1rem;
+        margin-right: 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        display: block;
+        background-color: var.$background-color;
+        span, 
+        span::before, 
+        span::after{
+            transition: transform 0.5s;
+        }
         span{
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        span, 
+        span::before, 
+        span::after{
+            position: absolute;
+            display: block;
+            width: 1.5rem;
+            height: 0.1rem;
+            background-color: var.$color;
+        }
+        span::before, 
+        span::after{
+            content: "";
+            top: 0;
+            left: 0;
+            transform-origin: 50% 50%;
+        }
+        span::before{
+            transform: translateY(-5px);
+            border-radius: 1px 1px 0 0;
+        }
+        span::after{
+            transform: translateY(5px);
+            border-radius: 0 0 1px 1px;
+        }
+        &:hover span::before{
+            transform: translateY(-7px);
+            transition-timing-function: cubic-bezier(.51,2.32,.85,.55);
+        }
+        &:hover span::after{
+            transform: translateY(7px);
+            transition-timing-function: cubic-bezier(.51,2.32,.85,.55);
+        }
+        @media screen and (min-width: 50rem) {
+            display: none;
+        }
+        &.is-opened {
             transform-origin: center;
             transition-duration: var.$duration-animation-button-header;
-            transform: scaleX(1.5);
-            border-radius: 1px;
-            &::before{
+            transform: rotate(-180deg) translateX(-0.5rem);
+            span{
                 transform-origin: center;
                 transition-duration: var.$duration-animation-button-header;
-                transform: translateY(-5px) translateX(-7px) rotate(-45deg) scaleX(0.6);
+                transform: scaleX(1.5);
                 border-radius: 1px;
-            }
-            &::after{
-                transform-origin: center;
-                transition-duration: var.$duration-animation-button-header;
-                transform: translateY(5px) translateX(-7px) rotate(45deg) scaleX(0.6);
-                border-radius: 1px;
+                &::before{
+                    transform-origin: center;
+                    transition-duration: var.$duration-animation-button-header;
+                    transform: translateY(-5px) translateX(-7px) rotate(-45deg) scaleX(0.6);
+                    border-radius: 1px;
+                }
+                &::after{
+                    transform-origin: center;
+                    transition-duration: var.$duration-animation-button-header;
+                    transform: translateY(5px) translateX(-7px) rotate(45deg) scaleX(0.6);
+                    border-radius: 1px;
+                }
             }
         }
     }
-}  
+}

@@ -1,0 +1,57 @@
+@use '../var';
+
+.header__contact {
+    position: absolute;
+    height: var.$sizes-cube;
+    width: calc(var.$sizes-cube * 2);
+    left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    &.is-opened {
+        transition-duration: var.$duration-animation-button-header;
+        transform: translateX(- calc(var.$sizes-cube * 2));
+    }
+    &--cube {
+        width: var.$sizes-cube;
+        height: var.$sizes-cube;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: spin 15s infinite linear;
+        .face {
+            position: absolute;
+            width: var.$sizes-cube;
+            height: var.$sizes-cube;
+            background: var.$background-color;
+            img {
+                width: 100%;
+            }
+        }
+        .top {
+            transform: rotateX(90deg) translateZ(calc(var.$sizes-cube / 2));
+        }
+        .bottom {
+            transform: rotateX(-90deg) translateZ(calc(var.$sizes-cube / 2));
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(calc(var.$sizes-cube / 2));
+        }
+        .right {
+            transform: rotateY(90deg) translateZ(calc(var.$sizes-cube / 2));
+        }
+        .front {
+            transform: rotateY(0deg) translateZ(calc(var.$sizes-cube / 2));
+        }
+        .back {
+            transform: rotateY(-180deg) translateZ(calc(var.$sizes-cube / 2));
+        }
+    }
+    @keyframes spin {
+        from {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+        to {
+            transform: rotateY(360deg) rotateX(360deg);
+        }
+    }
+}
