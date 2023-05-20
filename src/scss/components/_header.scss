@@ -7,7 +7,9 @@
     justify-content: space-between;
     &__title{
         font-family: 'Spongeboy';
-        color: var.$color;
+        color: transparent;
+        -webkit-text-stroke: 0.5px var.$color;
+        text-stroke: 0.5px var.$color;
         font-size: 1.6rem;
         padding: 1rem 0 0.5rem 2rem;
         text-transform: uppercase;

@@ -1,4 +1,5 @@
 import { carousel } from "./carousel.js";
+import { addSpan } from "./utils.js";
 
-// Animation carousel
 carousel();
+addSpan('banner__bottom--p')
