@@ -12,6 +12,7 @@
     justify-content: space-around;
     @media screen and (min-width: 620px) {
       height: var.$height;
+      max-width: calc(var.$width);
     }
     &__carousel {
       transform-style: preserve-3d;
