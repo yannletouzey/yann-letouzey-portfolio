@@ -25,14 +25,4 @@ export function burgerActive() {
             header__title.classList.remove('is-closed')
         }
     })
-    // window.addEventListener('resize', () => {
-    //     if (header__contact.classList.contains('is-opened')) {
-    //         if (window.innerWidth < 530) {
-    //             header__title.style.transform = `translateX(-${header__contact.clientWidth}px);`
-    //         } else {
-    //             header__title.style.transitionDuration = "0.5s"
-    //             header__title.style.transform = `translateX(0);`
-    //         }
-    //     }
-    // })
 }
