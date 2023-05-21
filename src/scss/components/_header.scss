@@ -24,19 +24,20 @@
             flex-wrap: nowrap;
             overflow: hidden;
             margin-right: 0.4rem;
-            transition: width 0.5s;
         }
         &--lastname{
+            transition: width 0.4s;
             width: 9.5rem;
         }
         &--firstname{
+            transition: width 0.5s;
             width: 5.5rem;
         }
         .lastnameHide{
             width: 0.95rem;
         }
         .lastnameShow{
-            transition-delay: 0.4s;
+            transition-delay: 0.3s;
             width: 10rem;
         }
         .firstnameHide{
@@ -92,6 +93,6 @@
         }
     }
     @media screen and (min-width: 39rem) {
-        padding: 1rem 0 0 8rem;
+        padding: 1rem 0 0 3rem;
     }
 }
