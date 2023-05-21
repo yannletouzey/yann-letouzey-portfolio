@@ -7,6 +7,8 @@
     align-items: center;
     justify-content: space-between;
     &__title{
+        position: relative;
+        display: flex;
         font-family: 'Spongeboy';
         color: transparent;
         -webkit-text-stroke: 0.5px var.$color;
@@ -14,6 +16,35 @@
         font-size: 1.6rem;
         padding: 1rem 0 0.5rem 2rem;
         text-transform: uppercase;
+        &--lastname,
+        &--firstname{
+            padding-top: 0.5rem;
+            display: inline-block;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            margin-right: 0.4rem;
+            transition: width 0.5s;
+        }
+        &--lastname{
+            width: 9.5rem;
+        }
+        &--firstname{
+            width: 5.5rem;
+        }
+        .lastnameHide{
+            width: 0.95rem;
+        }
+        .lastnameShow{
+            transition-delay: 0.4s;
+            width: 10rem;
+        }
+        .firstnameHide{
+            transition-delay: 0.4s;
+            width: 1.2rem;
+        }
+        .firstnameShow{
+            width: 5.5rem;
+        }
         &.is-opened {
             transition-duration: var.$duration-animation-button-header;
             transform: translateX(- calc(var.$sizes-cube * 3.5));
@@ -29,6 +60,15 @@
             font-size: 2.2rem;
             -webkit-text-stroke: 1px var.$color;
             text-stroke: 1px var.$color;
+            &--lastname{
+                width: 11.5rem;
+            }
+            .lastnameHide{
+                width: 1.15rem;
+            }
+            .lastnameShow{
+                width: 11.5rem;
+            }
         }    
         @media screen and (min-width: 50rem) {
             font-size: 3rem;
