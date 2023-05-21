@@ -9,7 +9,6 @@ setTimeout(() => {
     container.style.zIndex = -100
 }, 1600);
 
-
 boxRight.style.height = `${diagContainer}px`;
 boxRight.style.width = `${containerWidth}px`;
 boxLeft.style.height = `${diagContainer}px`;
