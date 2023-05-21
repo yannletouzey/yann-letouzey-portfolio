@@ -7,6 +7,7 @@ const diagContainer = Math.sqrt((containerWidth * containerWidth) + (containerHe
 
 setTimeout(() => {
     container.style.zIndex = -100
+    container.style.display = "none"
 }, 1600);
 
 boxRight.style.height = `${diagContainer}px`;

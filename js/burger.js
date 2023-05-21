@@ -30,4 +30,18 @@ export function burgerActive() {
             header__contact.classList.remove('is-closed')
         }
     })
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 800) {
+            header__container.classList.remove('is-opened')
+            header__icon.classList.remove('is-opened')
+            header__contact.classList.remove('is-opened')
+            header__container.classList.remove('is-closed')
+            header__icon.classList.remove('is-closed')
+            header__contact.classList.remove('is-closed')
+            lastname.classList.remove('lastnameHide')
+            lastname.classList.remove('lastnameShow')
+            firstname.classList.remove('firstnameHide')
+            firstname.classList.remove('firstnameShow')
+        }
+    })
 }

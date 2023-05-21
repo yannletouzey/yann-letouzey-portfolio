@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow-x: hidden;
     &__title{
         position: relative;
         display: flex;
@@ -69,9 +70,25 @@
             .lastnameShow{
                 width: 11.5rem;
             }
+            &--firstname{
+                width: 6.5rem;
+            }
+            .firstnameHide{
+                transition-delay: 0.4s;
+                width: 1.4rem;
+            }
+            .firstnameShow{
+                width: 6.5rem;
+            }
         }    
         @media screen and (min-width: 50rem) {
             font-size: 3rem;
+            &--lastname{
+                width: 16rem;
+            }
+            &--firstname{
+                width: 9rem;
+            }
         }
     }
     @media screen and (min-width: 39rem) {
