@@ -26,7 +26,40 @@
       width: var.$width;
       height: var.$height;
       transform-style: preserve-3d;
-      border: 1px solid var.$border-color-carousel;;
+      border: 1px solid var.$border-color-carousel;
+      img{
+        width: 100%;
+        aspect-ratio: 16/9;
+      }
+      &--link {
+        position: relative;
+        top: -0.5rem;
+        list-style-type: none;
+      }
+      &--link a {
+        color: var(--color);
+        text-align: center;
+        font-size: 1.3rem;
+      }
+      .s1 span {
+        transform-origin: bottom;
+      }
+      .s2 span {
+        transform-origin: top;
+        transform: translateY(100%) rotateX(-90deg);
+      }
+      .s2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      &--link:hover .s1 span {
+        transform: translateY(-100%) rotateX(-90deg);
+      }
+      &--link:hover .s2 span {
+        transform: translateY(0%) rotateX(0deg);
+      }
     }
     &__carousel-glow-ground{
       position: absolute;
