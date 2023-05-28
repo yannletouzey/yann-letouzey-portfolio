@@ -19,8 +19,7 @@
       transform-style: preserve-3d;
       width: 100%;
       max-width: var.$width;
-    height: 35rem;
-
+      height: var.$height;
       &--img{
         width: 100%;
         aspect-ratio: 16/9;
