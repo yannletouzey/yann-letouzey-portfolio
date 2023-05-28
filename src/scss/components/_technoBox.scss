@@ -1,0 +1,11 @@
+@use '../var';
+
+.container__carousel--techno {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+        width: 1.5rem;
+    }
+}

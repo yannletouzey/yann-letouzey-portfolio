@@ -8,5 +8,16 @@ function addSpan(id) {
         textWithId.innerHTML += `<span id=${i}>${e}</span>`
     }
 }
-
-export { addSpan }
+const spanText = () => {
+    const spanText = document.querySelectorAll(".container__carousel--link div");
+    spanText.forEach((element) => {
+        const letters = element.children[0].textContent.split("");
+        element.innerHTML = "";
+        letters.forEach((e, index) => {
+            element.innerHTML += `<span style="display: inline-block; transition: 0.5s; transition-delay: ${
+                0.02 * index
+            }s">${e}</span>`;
+        });
+    });
+}
+export { addSpan, spanText }
