@@ -4,14 +4,8 @@ export const carousel = () => {
   const nextBtn = document.getElementById("next");
   const carousel = document.getElementById("container__carousel");
   const allFaces = document.querySelectorAll(".container__carousel--face");
-  const technoName = [
-    "html",
-    'css',
-    "js",
-    "mysql"
-  ]
+  
   const carouselWidth = carousel.clientWidth
-  const faces = allFaces.length;
   const offsetFace = ((carouselWidth / 2) / 16);
   const lapDeg = 360;
   const degValue = lapDeg / 4;
@@ -65,22 +59,21 @@ export const carousel = () => {
     const face = allFaces[index];
     const newDegValue = degValue * index;
     face.style.transform = `rotateY(${newDegValue}deg) translateZ(${offsetFace}rem)`;
-    // face.classList.add('nbr-' + index)
 
     // Create div container => img 
     const boxImg = document.createElement('div')
     boxImg.classList.add('container__carousel--img')
     face.append(boxImg)
-
+    
     // Create img
     const img = document.createElement('img')
     img.src = dataCarousel[index].imgUrl
     boxImg.append(img)
-
-    // Create div container => img 
+    
+    // Create div container => desc 
     const boxDesc = document.createElement('div')
     boxDesc.classList.add('container__carousel--desc')
-    face.append(boxDesc)
+    face.append(boxDesc)    
     
     // Create link
     const linkDiv = document.createElement('div')

@@ -5,10 +5,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    :not(:first-child){
-        margin-left: 0.5rem;
-    }
     img{
         width: 1.5rem;
+        margin: 0 0.2rem;
     }
 }
