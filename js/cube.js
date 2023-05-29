@@ -1,4 +1,4 @@
-import { dataContact } from "./dataContact";
+import { dataContact } from "./dataContact.js";
 
 const header__menu = document.getElementById('header__menu')
 
