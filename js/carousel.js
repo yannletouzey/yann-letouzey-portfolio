@@ -61,7 +61,7 @@ export const carousel = () => {
     }
   });
 
-  for (let index = 0; index < faces; index++) {
+  for (let index = 0; index < allFaces.length; index++) {
     const face = allFaces[index];
     const newDegValue = degValue * index;
     face.style.transform = `rotateY(${newDegValue}deg) translateZ(${offsetFace}rem)`;
