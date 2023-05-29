@@ -91,29 +91,35 @@ export const carousel = () => {
     const technoBox =  document.createElement('div')
     technoBox.classList.add('container__carousel--techno')
     if (dataCarousel[index].techno.html) {
-      const imgHtml = document.createElement('img')
-      imgHtml.src = dataCarousel[index].techno.html
-      technoBox.append(imgHtml)
+      const img = document.createElement('img')
+      img.src = dataCarousel[index].techno.html
+      technoBox.append(img)
     }
     if (dataCarousel[index].techno.css) {
-      const imgCss = document.createElement('img')
-      imgCss.src = dataCarousel[index].techno.css
-      technoBox.append(imgCss)
+      const img = document.createElement('img')
+      img.src = dataCarousel[index].techno.css
+      technoBox.append(img)
     }
     if (dataCarousel[index].techno.js) {
-      const imgJs = document.createElement('img')
-      imgJs.src = dataCarousel[index].techno.js
-      technoBox.append(imgJs)
+      const img = document.createElement('img')
+      img.src = dataCarousel[index].techno.js
+      technoBox.append(img)
     }
     if (dataCarousel[index].techno.php) {
-      const imgPhp = document.createElement('img')
-      imgPhp.src = dataCarousel[index].techno.php
-      technoBox.append(imgPhp)
+      const img = document.createElement('img')
+      img.src = dataCarousel[index].techno.php
+      technoBox.append(img)
     }
     if (dataCarousel[index].techno.mysql) {
-      const imgSql = document.createElement('img')
-      imgSql.src = dataCarousel[index].techno.mysql
-      technoBox.append(imgSql)
+      const img = document.createElement('img')
+      img.src = dataCarousel[index].techno.mysql
+      technoBox.append(img)
+    }
+    if (dataCarousel[index].techno.three) {
+      const img = document.createElement('img')
+      img.src = dataCarousel[index].techno.three
+      img.style.backgroundColor = 'white'
+      technoBox.append(img)
     }
     boxDesc.append(technoBox)
 

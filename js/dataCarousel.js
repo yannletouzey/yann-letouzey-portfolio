@@ -7,7 +7,8 @@ export const dataCarousel = [
         techno: {
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
-            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
+            three: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg", import.meta.url)
         }
     },
     {
@@ -18,7 +19,9 @@ export const dataCarousel = [
         techno: {
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
-            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
+            php: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", import.meta.url),
+            mysql: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", import.meta.url)
         }
     },
     {
