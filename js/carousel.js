@@ -4,35 +4,68 @@ export const carousel = () => {
   const nextBtn = document.getElementById("next");
   const carousel = document.getElementById("container__carousel");
   const allFaces = document.querySelectorAll(".container__carousel--face");
-
+  const technoName = [
+    "html",
+    'css',
+    "js",
+    "mysql"
+  ]
   const carouselWidth = carousel.clientWidth
   const faces = allFaces.length;
   const offsetFace = ((carouselWidth / 2) / 16);
   const lapDeg = 360;
-  const degValue = lapDeg / faces;
+  const degValue = lapDeg / 4;
   let deg = 0
-  let current = 0
+  let current = 1
+  
   const slide = (params) => {
-    params.style.transitionDuration = "1.5s";
+    params.style.transitionDuration = "0.6s";
     params.style.transform = `rotateY(${deg}deg)`;
   };
   prevBtn.addEventListener("click", () => {
-    current--
-    console.log(allFaces[0]);
-    deg += degValue;
-    slide(carousel);
+    if (current > 1) {
+      current--
+      deg += degValue;
+      slide(carousel);
+      dataCarousel.forEach((dc, i) => {
+          if (dataCarousel[i].id == current) {
+            allFaces.forEach((f, fi) => {
+              if (fi == (current + 2)) {
+                f.classList.add('hide')
+              }
+              if (fi == (current - 2)) {
+                f.classList.remove('hide')
+              }
+            })
+          }
+      })
+    }
   });
   nextBtn.addEventListener("click", () => {
-    current++
-    deg -= degValue;
-    slide(carousel);
+    if (current < dataCarousel.length) {
+      current++
+      deg -= degValue;
+      slide(carousel);
+      dataCarousel.forEach((dc, i) => {
+        if (dataCarousel[i].id == current) {
+          allFaces.forEach((f, fi) => {
+            if (fi == (current + 1)) {
+              f.classList.remove('hide')
+            }
+            if (fi == (current - 3)) {
+              f.classList.add('hide')
+            }
+          })
+        }
+      })
+    }
   });
 
-  for (let index = 0; index < allFaces.length; index++) {
+  for (let index = 0; index < faces; index++) {
     const face = allFaces[index];
     const newDegValue = degValue * index;
     face.style.transform = `rotateY(${newDegValue}deg) translateZ(${offsetFace}rem)`;
-    face.classList.add('nbr-' + index)
+    // face.classList.add('nbr-' + index)
 
     // Create div container => img 
     const boxImg = document.createElement('div')
