@@ -1,4 +1,5 @@
 import { dataCarousel } from "./dataCarousel.js";
+
 export const carousel = () => {
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
