@@ -17,6 +17,7 @@ export const carousel = () => {
     params.style.transitionDuration = "0.6s";
     params.style.transform = `rotateY(${deg}deg)`;
   };
+
   prevBtn.addEventListener("click", () => {
     if (current > 1) {
       current--
