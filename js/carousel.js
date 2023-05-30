@@ -1,4 +1,4 @@
-import { dataCarousel } from "./dataCarousel.js";
+import { dataCarousel } from "./dataCarousel";
 
 export const carousel = () => {
   const prevBtn = document.getElementById("prev");

@@ -1,6 +1,6 @@
-import { carousel } from "./carousel.js";
-import { addSpan, spanText } from "./utils.js";
-import { burgerActive } from "./burger.js";
+import { carousel } from "./carousel";
+import { addSpan, spanText } from "./utils";
+import { burgerActive } from "./burger";
 
 carousel();
 spanText()
