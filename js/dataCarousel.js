@@ -79,5 +79,16 @@ export const dataCarousel = [
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
         }
+    },
+    {
+        id: 8,
+        imgUrl: new URL("../src/img/gif/build-cube-css.gif", import.meta.url),
+        title: "build-cube-css",
+        link: "https://build-cube-css.vercel.app/",
+        techno: {
+            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
+            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
+        }
     }
 ]

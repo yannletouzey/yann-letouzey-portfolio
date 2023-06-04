@@ -1,7 +1,7 @@
 @use '../var';
 
 .container {
-  position: relative;
+    position: relative;
     width: 100%;
     max-width: calc(var.$width * 2);
     height: 28rem;
