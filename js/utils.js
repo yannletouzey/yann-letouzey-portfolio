@@ -20,4 +20,15 @@ const spanText = () => {
         });
     });
 }
-export { addSpan, spanText }
+function addSpanReverse(id) {
+    const textWithId = document.getElementById('' + id)
+    let text = document.getElementById('' + id).textContent
+    text = [...text].reverse().join("");
+    textWithId.innerHTML = ""
+    let textArray = Array.from(text)
+    for (let i = 0; i < textArray.length; i++) {
+        let e = textArray[i];
+        textWithId.innerHTML += `<span id=${i}>${e}</span>`
+    }
+}
+export { addSpan, spanText, addSpanReverse }
