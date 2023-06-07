@@ -1,6 +1,7 @@
 import { dataCarousel } from "./dataCarousel";
 
 export const carousel = () => {
+  const banner = document.querySelector('#banner__panel')
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
   const carousel = document.getElementById("container__carousel");
@@ -24,7 +25,7 @@ export const carousel = () => {
       deg += degValue;
       slide(carousel);
       dataCarousel.forEach((dc, i) => {
-          if (dataCarousel[i].id == current) {
+        if (dataCarousel[i].id == current) {
             allFaces.forEach((f, fi) => {
               if (fi == (current + 2)) {
                 f.classList.add('hide')
@@ -56,7 +57,7 @@ export const carousel = () => {
       })
     }
   });
-
+  const technoImg = ['html','css','js','three','mysql','php']
   for (let index = 0; index < allFaces.length; index++) {
     const face = allFaces[index];
     const newDegValue = degValue * index;
@@ -65,7 +66,6 @@ export const carousel = () => {
     // Create div container => img 
     const boxImg = document.createElement('div')
     boxImg.classList.add('container__carousel--img')
-    face.append(boxImg)
     
     // Create img
     const img = document.createElement('img')
@@ -75,69 +75,43 @@ export const carousel = () => {
     // Create div container => desc 
     const boxDesc = document.createElement('div')
     boxDesc.classList.add('container__carousel--desc')
-    face.append(boxDesc)    
+    face.append(boxImg, boxDesc)    
     
     // Create link
     const linkDiv = document.createElement('div')
     linkDiv.classList.add('container__carousel--link')
-    boxDesc.append(linkDiv)
 
     // Create box img techno
     const technoBox =  document.createElement('div')
     technoBox.classList.add('container__carousel--techno')
-    if (dataCarousel[index].techno.html) {
-      const img = document.createElement('img')
-      img.src = dataCarousel[index].techno.html
-      technoBox.append(img)
-    }
-    if (dataCarousel[index].techno.css) {
-      const img = document.createElement('img')
-      img.src = dataCarousel[index].techno.css
-      technoBox.append(img)
-    }
-    if (dataCarousel[index].techno.js) {
-      const img = document.createElement('img')
-      img.src = dataCarousel[index].techno.js
-      technoBox.append(img)
-    }
-    if (dataCarousel[index].techno.php) {
-      const img = document.createElement('img')
-      img.src = dataCarousel[index].techno.php
-      technoBox.append(img)
-    }
-    if (dataCarousel[index].techno.mysql) {
-      const img = document.createElement('img')
-      img.src = dataCarousel[index].techno.mysql
-      technoBox.append(img)
-    }
-    if (dataCarousel[index].techno.three) {
-      const img = document.createElement('img')
-      img.src = dataCarousel[index].techno.three
-      img.style.backgroundColor = 'white'
-      technoBox.append(img)
-    }
-    boxDesc.append(technoBox)
+    technoImg.forEach((imgT, i) => {
+      console.log(imgT);
+      if (dataCarousel[index].techno[imgT]) {
+        const img = document.createElement('img')
+        img.src = dataCarousel[index].techno[imgT]
+        technoBox.append(img)
+      }
+    })
+    boxDesc.append(linkDiv, technoBox)
 
     // create btn "more info"
-    const btn = document.createElement('button')
-    btn.classList.add("btn-more")
-    btn.classList.add("btn-more-info")
-    btn.setAttribute('id', "btn-more-info-" + (index + 1))
-    for (let s = 0; s < 11; s++) {
-      const spanButton = document.createElement('span')
-      btn.append(spanButton)
-    }
-    const p = document.createElement('p')
-    p.innerHTML = "En savoir plus"
-    btn.append(p)
-    boxDesc.append(btn)
+    // const btn = document.createElement('button')
+    // btn.classList.add("btn-more", "btn-more-info")
+    // btn.setAttribute('id', "btn-more-info-" + (index + 1))
+    // for (let s = 0; s < 11; s++) {
+    //   const spanButton = document.createElement('span')
+    //   btn.append(spanButton)
+    // }
+    // const p = document.createElement('p')
+    // p.innerHTML = "En savoir plus"
+    // btn.append(p)
+    // boxDesc.append(btn)
 
     // Create div/span for rotate animation text
     for (let i = 1; i <= 2; i++) {
       const link = document.createElement('a')
       const div = document.createElement('div')
-      div.classList.add('containerLink')
-      div.classList.add('s' + i)
+      div.classList.add('containerLink', 's' + i)
       const span = document.createElement('span')
       div.append(span)
       link.append(div)
