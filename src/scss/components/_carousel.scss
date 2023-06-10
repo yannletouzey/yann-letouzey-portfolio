@@ -28,15 +28,30 @@
           aspect-ratio: 16/9;
         }
       }
+      &--tooltip{
+        position: absolute;
+        width: calc(100% + 0.2rem);
+        aspect-ratio: 1/1;
+        background-color: var.$background-color-carousel;
+        color: var.$color;
+        left: 0;
+        bottom: 0;
+        transform: scale(0);
+        transform-origin: 0 100%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+      }
       &--desc{
         position: relative;
         width: 100%;
         height: 40%;
-        // padding-top: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        transform: translateZ(0.01px);
+        transform: translateZ(0.01px);  
       }
       &--link {
         position: relative;
@@ -69,24 +84,45 @@
           transform: translateY(0%) rotateX(0deg);
         }
       }
-    }
-    &__carousel--face {
-      background-color: var.$background-color-carousel;
-      position: absolute;
-      width: var.$width;
-      height: var.$height;
-      transform-style: preserve-3d;
-      border: 1px solid var.$border-color-carousel;
-    }
-    &__carousel-glow-ground{
-      position: absolute;
-      width: var.$width;
-      height: var.$width;
-      background-color: white;
-      opacity: 0.2;
-      left: 50%;
-      transform: rotateX(90deg) translateX(-50%) translateZ(-14rem);
-      box-shadow: 0px 0px 80px 80px #fff;
+      &--tagStack{
+        color: transparent;
+        width: 1rem;
+        padding-right: 0.5rem;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        position: absolute;
+        height: 110%;
+        right: 0;
+        bottom: -0.5rem;
+        text-align: center;
+        -webkit-text-stroke: 0.5px #fff;
+        text-stroke: 0.5px #fff;
+      }
+      &--face {
+        background-color: var.$background-color-carousel;
+        position: absolute;
+        width: var.$width;
+        height: var.$height;
+        transform-style: preserve-3d;
+        border: 1px solid var.$border-color-carousel;
+        &:hover .container__carousel--tooltip{
+          transition: 0.4s;
+          transform: scale(1) translateY(0.5rem) translateX(-0.1rem);
+            border-radius: 0;
+        }
+      }
+      &-glow-ground{
+        position: absolute;
+        width: var.$width;
+        height: var.$width;
+        background-color: white;
+        opacity: 0.2;
+        left: 50%;
+        transform: rotateX(90deg) translateX(-50%) translateZ(-14rem);
+        box-shadow: 0px 0px 80px 80px #fff;
+      }
     }
     .hide{
       display: none;

@@ -1,29 +1,22 @@
 import { dataCarousel } from "./dataCarousel";
+import { spin } from "./spin";
+import { utils } from './utils'
 
 export const carousel = () => {
-  const banner = document.querySelector('#banner__panel')
   const prevBtn = document.getElementById("prev");
   const nextBtn = document.getElementById("next");
   const carousel = document.getElementById("container__carousel");
   const allFaces = document.querySelectorAll(".container__carousel--face");
-  
-  const carouselWidth = carousel.clientWidth
-  const offsetFace = ((carouselWidth / 2) / 16);
-  const lapDeg = 360;
-  const degValue = lapDeg / 4;
-  let deg = 0
+  const offsetFace = ((carousel.clientWidth / 2) / 16);
+  const degValue = 90; // 1/4 of lap
+  let degrees = 0
   let current = 1
-  
-  const slide = (params) => {
-    params.style.transitionDuration = "0.6s";
-    params.style.transform = `rotateY(${deg}deg)`;
-  };
 
   prevBtn.addEventListener("click", () => {
     if (current > 1) {
       current--
-      deg += degValue;
-      slide(carousel);
+      degrees += degValue;
+      spin(carousel, degrees);
       dataCarousel.forEach((dc, i) => {
         if (dataCarousel[i].id == current) {
             allFaces.forEach((f, fi) => {
@@ -41,8 +34,8 @@ export const carousel = () => {
   nextBtn.addEventListener("click", () => {
     if (current < dataCarousel.length) {
       current++
-      deg -= degValue;
-      slide(carousel);
+      degrees -= degValue;
+      spin(carousel, degrees);
       dataCarousel.forEach((dc, i) => {
         if (dataCarousel[i].id == current) {
           allFaces.forEach((f, fi) => {
@@ -57,6 +50,7 @@ export const carousel = () => {
       })
     }
   });
+
   const technoImg = ['html','css','js','three','mysql','php']
   for (let index = 0; index < allFaces.length; index++) {
     const face = allFaces[index];
@@ -75,38 +69,11 @@ export const carousel = () => {
     // Create div container => desc 
     const boxDesc = document.createElement('div')
     boxDesc.classList.add('container__carousel--desc')
-    face.append(boxImg, boxDesc)    
     
     // Create link
     const linkDiv = document.createElement('div')
     linkDiv.classList.add('container__carousel--link')
-
-    // Create box img techno
-    const technoBox =  document.createElement('div')
-    technoBox.classList.add('container__carousel--techno')
-    technoImg.forEach((imgT, i) => {
-      console.log(imgT);
-      if (dataCarousel[index].techno[imgT]) {
-        const img = document.createElement('img')
-        img.src = dataCarousel[index].techno[imgT]
-        technoBox.append(img)
-      }
-    })
-    boxDesc.append(linkDiv, technoBox)
-
-    // create btn "more info"
-    // const btn = document.createElement('button')
-    // btn.classList.add("btn-more", "btn-more-info")
-    // btn.setAttribute('id', "btn-more-info-" + (index + 1))
-    // for (let s = 0; s < 11; s++) {
-    //   const spanButton = document.createElement('span')
-    //   btn.append(spanButton)
-    // }
-    // const p = document.createElement('p')
-    // p.innerHTML = "En savoir plus"
-    // btn.append(p)
-    // boxDesc.append(btn)
-
+    
     // Create div/span for rotate animation text
     for (let i = 1; i <= 2; i++) {
       const link = document.createElement('a')
@@ -120,5 +87,44 @@ export const carousel = () => {
       span.append(textLink)
       linkDiv.append(link) 
     }
+
+    // Create box img techno
+    const technoBox =  document.createElement('div')
+    technoBox.classList.add('container__carousel--techno')
+    technoImg.forEach((imgTechno, i) => {
+      if (dataCarousel[index].techno[imgTechno]) {
+        const img = document.createElement('img')
+        img.src = dataCarousel[index].techno[imgTechno]
+        technoBox.append(img)
+      }
+    })
+    
+    // create tag stack
+    const tagStack = document.createElement('div')
+    tagStack.classList.add('container__carousel--tagStack')
+    tagStack.textContent = dataCarousel[index].stack
+    
+    if (!dataCarousel[index].inline) {
+      const tooltip = document.createElement('div')
+      tooltip.classList.add('container__carousel--tooltip')
+      tooltip.textContent = `${dataCarousel[index].title} n'est pas encore en ligne`
+      boxDesc.prepend(tooltip)
+    }
+
+    boxDesc.append(linkDiv, technoBox, tagStack)
+
+    // create btn "more info"
+    // const btn = document.createElement('button')
+    // btn.classList.add("btn-more", "btn-more-info")
+    // btn.setAttribute('id', "btn-more-info-" + (index + 1))
+    // for (let s = 0; s < 11; s++) {
+    //   const spanButton = document.createElement('span')
+    //   btn.append(spanButton)
+    // }
+    // const p = document.createElement('p')
+    // p.innerHTML = "En savoir plus"
+    // btn.append(p)
+    // boxDesc.append(btn)
+    face.append(boxImg, boxDesc)        
   }
 };

@@ -1,8 +1,9 @@
 import { carousel } from "./carousel";
-import { addSpan, addSpanReverse, spanText } from "./utils";
+import { utils } from "./utils";
 import { burger } from "./burger";
-
+import { animateStart } from "./animateStart";
 carousel();
-spanText()
-addSpanReverse('banner__panel')
+utils.spanText()
+utils.addSpanReverse('banner__panel')
 burger()
+animateStart()
