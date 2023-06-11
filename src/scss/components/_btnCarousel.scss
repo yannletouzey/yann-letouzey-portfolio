@@ -15,20 +15,12 @@
     background: transparent;
     border: 0;
     cursor: pointer;
-    &:hover #square-prev path {
+    &:hover #square-prev path, &:hover #square-next path {
       stroke-dashoffset: var.$stroke-square;
-    }
-    &:hover #square-next path {
-      stroke-dashoffset: var.$stroke-square;
-    }
-    &:hover #square-next path,
-    &:hover #arrow-next path,
-    &:hover #square-prev path,
-    &:hover #arrow-prev path {
       transition-duration: 0.5s;
     }
-    &:hover #arrow-prev path,
-    &:hover #arrow-next path {
+    &:hover #arrow-prev path, &:hover #arrow-next path {
+      transition-duration: 0.5s;
       stroke-dashoffset: 0;
       transition-delay: 0.2s;
       --pos-x: calc((+10%));
@@ -38,19 +30,14 @@
   &__prev {
     transform: rotateZ(180deg);
   }
-  #square-prev path {
-    stroke-dasharray: var.$stroke-square;
-  }
   #arrow-prev path, #arrow-next path {
     stroke-dasharray: var.$stroke-arrow;
     stroke-dashoffset: var.$stroke-arrow;
   }
-  #square-next path {
+  #square-prev path, #square-next path {
     stroke-dasharray: var.$stroke-square;
   }
-  
-  #square-prev,
-  #square-next {
+  #square-prev, #square-next {
     position: absolute;
   }
   #square-prev{
@@ -59,12 +46,9 @@
   #square-next{
     transform: translate(-50%, -50%) rotateY(180deg);
   }
-  #arrow-prev,
-  #arrow-next {
+  #arrow-prev, #arrow-next {
     position: absolute;
     --pos-x: calc((-50%) - 5px);
     transform: translate(var(--pos-x), -50%);
-    transform: translate(var(--pos-x), -50%);
   }
-
 }
