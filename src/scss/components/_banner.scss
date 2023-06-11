@@ -1,89 +1,62 @@
-@use '../var';
-@use '../font';
+@use "../var";
+@use "../font";
 
-.banner{
-    display: none;
-    @media screen and (min-width: 30rem) {
-        position: absolute;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform-style: preserve-3d;
-        animation: spin 30s linear infinite;
-        font-family: 'Monaco';
-        text-transform: uppercase;
-        @keyframes spin {
-            0%{
-                transform: rotateX(-40deg) rotateY(0deg);
-            }
-            100%{
-                transform: rotateX(-40deg) rotateY(360deg);
-            }
-        }
-        &__panel{
-            transform-style: preserve-3d;
-            position: absolute;
-            font-size: 6rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: transparent;
-            -webkit-text-stroke: 1px #2c2c2c96;
-            text-stroke: 1px #2c2c2c96;
-            @media screen and (min-width: 70rem) {
-                font-size: 8rem;
-            }
-        }
-        &__panel span{
-            position: absolute;
-            transform: rotateY(var(--angle)) translateX(40rem) rotateY(-90deg) scaleY(1.5) scaleX(1.2);
-            @media screen and (min-width: 70rem) {
-                transform: rotateY(var(--angle)) translateX(60rem) rotateY(-90deg) scaleY(1.8) scaleX(1.8);
-            }
-            &:hover{
-                cursor: default;
-                -webkit-text-stroke: 1px rgb(255, 77, 0);
-                text-stroke: 1px rgb(255, 77, 0);
-                color: rgb(255, 77, 0);
-                text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 0px -33px 20px #CE5937;
-            }
-        }
-        @for $i from 0 to 48 {
-            span:nth-child(#{$i + 1}){
-                --angle: #{360deg / 48 * $i};
-            }
-        }
+.banner {
+  display: none;
+  @media screen and (min-width: 30rem) {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    animation: spin 30s linear infinite;
+    font-family: "Monaco";
+    text-transform: uppercase;
+    @keyframes spin {
+      0% {
+        transform: rotateX(-40deg) rotateY(0deg);
+      }
+      100% {
+        transform: rotateX(-40deg) rotateY(360deg);
+      }
     }
-    // &__bottom{
-    //     position: absolute;
-    //     bottom: 0;
-    //     width: 100%;
-    //     text-align: center;
-    //     perspective: 50rem;
-    //     background-color: transparent;
-    //     &--title{
-    //         // padding-top: 2rem;
-    //         color: transparent;
-    //         -webkit-text-stroke: 1px var.$color;
-    //         text-stroke: 1px var.$color;
-    //         font-family: 'Spongeboy';
-    //         text-transform: uppercase;
-    //         font-size: 10.5vw;
-    //         transform-style: preserve-3d;
-    //         transform-origin: center;
-    //         transform: rotateX(65deg);
-    //         span:hover{
-    //             cursor: default;
-    //             -webkit-text-stroke: 1px rgb(255, 77, 0);
-    //             text-stroke: 1px rgb(255, 77, 0);
-    //             color: rgb(255, 77, 0);
-    //             text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00, 0px -33px 20px #CE5937;
-    //         }
-    //         @media screen and (min-width: 39rem) {
-    //             -webkit-text-stroke: 2px var.$color;
-    //             text-stroke: 2px var.$color;
-    //         }
-    //     }
-    // }
+    &__panel {
+      transform-style: preserve-3d;
+      position: absolute;
+      font-size: 6rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: transparent;
+      -webkit-text-stroke: 1px #2c2c2c96;
+      text-stroke: 1px #2c2c2c96;
+      @media screen and (min-width: 70rem) {
+        top: 3rem;
+        font-size: 8rem;
+      }
+    }
+    &__panel span {
+      position: absolute;
+      transform: rotateY(var(--angle)) translateX(40rem) rotateY(-90deg)
+        scaleY(1.5) scaleX(1.2);
+      @media screen and (min-width: 70rem) {
+        transform: rotateY(var(--angle)) translateX(60rem) rotateY(-90deg)
+          scaleY(1.8) scaleX(1.8);
+      }
+      &:hover {
+        cursor: default;
+        -webkit-text-stroke: 1px rgb(255, 77, 0);
+        text-stroke: 1px rgb(255, 77, 0);
+        color: rgb(255, 77, 0);
+        text-shadow: 0 -1px 4px #fff, 0 -2px 10px #ff0, 0 -10px 20px #ff8000,
+          0 -18px 40px #f00, 0px -33px 20px #ce5937;
+      }
+    }
+    @for $i from 0 to 48 {
+      span:nth-child(#{$i + 1}) {
+        --angle: #{360deg / 48 * $i};
+      }
+    }
+  }
 }
