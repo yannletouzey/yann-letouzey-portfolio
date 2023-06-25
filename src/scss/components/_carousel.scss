@@ -1,4 +1,5 @@
 @use '../var';
+@use '../font';
 
 .container {
     position: relative;
@@ -54,6 +55,7 @@
         transform: translateZ(0.01px);  
       }
       &--link {
+        font-family: 'SpaceMono-Italic';
         position: relative;
         list-style-type: none;
         a {
@@ -118,7 +120,7 @@
         width: var.$width;
         height: var.$width;
         background-color: white;
-        opacity: 0.2;
+        opacity: 0.4;
         left: 50%;
         transform: rotateX(90deg) translateX(-50%) translateZ(-14rem);
         box-shadow: 0px 0px 80px 80px #fff;

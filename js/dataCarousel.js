@@ -98,7 +98,7 @@ export const dataCarousel = [
     {
         id: 8,
         imgUrl: new URL("../src/img/visuel-padding-margin.png", import.meta.url),
-        title: "visual-padding-margin-css",
+        title: "padding-margin-css",
         link: "https://visual-padding-margin-css.vercel.app/",
         techno: {
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
