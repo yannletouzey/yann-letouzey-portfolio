@@ -1,4 +1,4 @@
-import { dataCarousel } from "./dataCarousel";
+import { dataCarousel } from "./data/dataCarousel";
 import { spin } from "./spin";
 import { utils } from './utils'
 
@@ -51,7 +51,7 @@ export const carousel = () => {
     }
   });
 
-  const technoImg = ['html','css','js','three','mysql','php']
+  const technoImg = ['html','css','js','three','mysql','php','node','express']
   for (let index = 0; index < allFaces.length; index++) {
     const face = allFaces[index];
     const newDegValue = degValue * index;
