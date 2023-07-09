@@ -42,7 +42,7 @@ export const dataCarousel = [
     {
         id: 4,
         imgUrl: new URL("../../src/img/screenshot-website/haunted-house.png", import.meta.url),
-        title: "haunted-house-threejs",
+        title: "haunted-house",
         link: "https://haunted-house-blond-xi.vercel.app/",
         techno: {
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
