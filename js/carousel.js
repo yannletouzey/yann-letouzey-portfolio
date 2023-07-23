@@ -103,12 +103,7 @@ export const carousel = () => {
     const tagStack = document.createElement('div')
     tagStack.classList.add('container__carousel--tagStack')
     tagStack.textContent = dataCarousel[index].stack
-    for (let d = 0; d < 3; d++) {
-      const div = document.createElement('div')
-      div.classList.add('container__carousel--tagStack-div' + d)
-      tagStack.append(div)
-    }
-
+    
     if (!dataCarousel[index].inline) {
       const tooltip = document.createElement('div')
       tooltip.classList.add('container__carousel--tooltip')

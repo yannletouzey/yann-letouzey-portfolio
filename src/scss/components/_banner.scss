@@ -28,12 +28,14 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: var.$background-color;
-      -webkit-text-stroke: 1px #2c2c2c96;
-      text-stroke: 1px #2c2c2c96;
+      color: var.$background-color-banner;
+      -webkit-text-stroke: 2px #2c2c2c96;
+      text-stroke: 2px #2c2c2c96;
       @media screen and (min-width: 70rem) {
         top: 3rem;
         font-size: 8rem;
+        -webkit-text-stroke: 3px #2c2c2c96;
+        text-stroke: 3px #2c2c2c96;
       }
     }
     &__panel span {

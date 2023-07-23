@@ -17,9 +17,7 @@ export const utils = {
       const letters = element.children[0].textContent.split("");
       element.innerHTML = "";
       letters.forEach((e, index) => {
-        element.innerHTML += `<span style="display: inline-block; transition: 0.5s; transition-delay: ${
-          0.02 * index
-        }s">${e}</span>`;
+        element.innerHTML += `<span style="display: inline-block; transition: 0.5s; transition-delay: ${0.03 * index}s">${e}</span>`;
       });
     });
   },
