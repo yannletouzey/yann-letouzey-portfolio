@@ -1,7 +1,7 @@
 export const dataCarousel = [
     {
         id: 1,
-        imgUrl: new URL("../../src/img/gif/bounce-cube.gif", import.meta.url),
+        imgUrl: new URL("../../src/img/screenshot-website/bounce-cube.png", import.meta.url),
         title: "bounce-cube",
         link: "https://bounce-cube.vercel.app",
         techno: {
@@ -33,7 +33,7 @@ export const dataCarousel = [
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
-            three: new URL("../../src/img/three.png", import.meta.url)
+            three: new URL("../../src/img/logos/three.png", import.meta.url)
         },
         stack: "Front-end",
         inline: true
@@ -47,7 +47,7 @@ export const dataCarousel = [
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
-            three: new URL("../../src/img/three.png", import.meta.url)
+            three: new URL("../../src/img/logos/three.png", import.meta.url)
         },
         stack: "Front-end",
         inline: true
@@ -61,7 +61,7 @@ export const dataCarousel = [
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
-            three: new URL("../../src/img/three.png", import.meta.url)
+            three: new URL("../../src/img/logos/three.png", import.meta.url)
         },
         stack: "Front-end",
         inline: true
@@ -81,7 +81,7 @@ export const dataCarousel = [
     },
     {
         id: 7,
-        imgUrl: new URL("../../src/img/screenshot-website/screenshot-easyTimeClock/home-connect/1440x900.png", import.meta.url),
+        imgUrl: new URL("../../src/img/screenshot-website/1440x900.png", import.meta.url),
         title: "easy-time-clock",
         link: "#",
         techno: {
@@ -96,7 +96,7 @@ export const dataCarousel = [
     },
     {
         id: 8,
-        imgUrl: new URL("../../src/img/screenshot-website/screenshot-statistiques-covid.fr/home-large.png", import.meta.url),
+        imgUrl: new URL("../../src/img/screenshot-website/home-large.png", import.meta.url),
         title: "statistiques-covid",
         link: "https://www.statistiques-covid.com",
         techno: {
@@ -111,7 +111,7 @@ export const dataCarousel = [
     },
     {
         id: 9,
-        imgUrl: new URL("../../src/img/gif/bounce-ball.gif", import.meta.url),
+        imgUrl: new URL("../../src/img/screenshot-website/bounce-ball.png", import.meta.url),
         title: "bounce-ball",
         link: "https://bounce-ball.vercel.app",
         techno: {
@@ -124,7 +124,7 @@ export const dataCarousel = [
     },
     {
         id: 10,
-        imgUrl: new URL("../../src/img/gif/cube-in-cube.gif", import.meta.url),
+        imgUrl: new URL("../../src/img/screenshot-website/cube-in-cube.png", import.meta.url),
         title: "cube-in-cube",
         link: "https://cube-in-cube.vercel.app",
         techno: {
@@ -137,7 +137,7 @@ export const dataCarousel = [
     },
     {
         id: 11,
-        imgUrl: new URL("../../src/img/visuel-padding-margin.png", import.meta.url),
+        imgUrl: new URL("../../src/img/screenshot-website/visuel-padding-margin.png", import.meta.url),
         title: "padding-margin-css",
         link: "https://visual-padding-margin-css.vercel.app/",
         techno: {
