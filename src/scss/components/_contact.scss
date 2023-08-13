@@ -18,6 +18,10 @@
     }
     @media screen and (min-width: 50rem) {
         transform: translateX(- calc(var.$sizes-cube * 4.5));
+        &--cube:hover {
+            transition-duration: 0.5s;
+            scale: 1.2;
+        }
     }
     &--cube {
         width: var.$sizes-cube;
