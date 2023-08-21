@@ -98,7 +98,7 @@ export const carousel = () => {
         technoBox.append(img)
       }
     })
-    
+
     // create tag stack
     const tagStack = document.createElement('div')
     tagStack.classList.add('container__carousel--tagStack')
@@ -112,19 +112,6 @@ export const carousel = () => {
     }
 
     boxDesc.append(linkDiv, technoBox, tagStack)
-
-    // create btn "more info"
-    // const btn = document.createElement('button')
-    // btn.classList.add("btn-more", "btn-more-info")
-    // btn.setAttribute('id', "btn-more-info-" + (index + 1))
-    // for (let s = 0; s < 11; s++) {
-    //   const spanButton = document.createElement('span')
-    //   btn.append(spanButton)
-    // }
-    // const p = document.createElement('p')
-    // p.innerHTML = "En savoir plus"
-    // btn.append(p)
-    // boxDesc.append(btn)
-    face.append(boxImg, boxDesc)        
+    face.append(boxImg, boxDesc)
   }
 };

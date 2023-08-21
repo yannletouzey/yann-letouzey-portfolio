@@ -3,21 +3,28 @@
 .header__menu {
     position: absolute;
     height: var.$sizes-cube;
-    width: calc(var.$sizes-cube * 3.5);
+    width: calc(var.$sizes-cube * 5.5);
     left: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     &.is-opened {
         transition-duration: var.$duration-animation-button-header;
-        transform: translateX(- calc(var.$sizes-cube * 3.5));
-    } 
+        transform: translateX(- calc(var.$sizes-cube * 5.5));
+    }
+    @media screen and (min-width: 39rem) {
+        &.is-opened {
+            transition-duration: var.$duration-animation-button-header;
+            transform: translateX(- calc(var.$sizes-cube * 6.5));
+        }
+    }
     &.is-closed {
         transition-duration: var.$duration-animation-button-header;
         transform: translateX(0);
     }
     @media screen and (min-width: 50rem) {
-        transform: translateX(- calc(var.$sizes-cube * 4.5));
+        width: calc(var.$sizes-cube * 8);
+        transform: translateX(- calc((var.$sizes-cube * 1.5) * 6));
         &--cube:hover {
             transition-duration: 0.5s;
             scale: 1.2;
@@ -56,6 +63,32 @@
         .back {
             transform: rotateY(-180deg) translateZ(calc(var.$sizes-cube / 2));
         }
+        @media screen and (min-width: 50rem) {
+            width: (var.$sizes-cube * 1.5);
+            height: (var.$sizes-cube * 1.5);
+            .face {
+                width: (var.$sizes-cube * 1.5);
+                height: (var.$sizes-cube * 1.5);
+            }
+            .top {
+                transform: rotateX(90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+            }
+            .bottom {
+                transform: rotateX(-90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+            }
+            .left {
+                transform: rotateY(-90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+            }
+            .right {
+                transform: rotateY(90deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+            }
+            .front {
+                transform: rotateY(0deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+            }
+            .back {
+                transform: rotateY(-180deg) translateZ(calc((var.$sizes-cube * 1.5) / 2));
+            }
+        }    
     }
     @keyframes spin {
         from {

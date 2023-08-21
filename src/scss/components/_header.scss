@@ -26,11 +26,12 @@
             overflow: hidden;
         }
         &--lastname{
-            transition: width 0.4s;
+            transition: width 0.2s;
             width: 9.5rem;
         }
         &--firstname{
-            transition: width 0.5s;
+            border-radius: 0 0 1rem 0;
+            transition: width 0.2s;
             width: 5.5rem;
             margin-right: 0.5rem;
         }
@@ -38,11 +39,11 @@
             width: 0.95rem;
         }
         .lastnameShow{
-            transition-delay: 0.3s;
+            // transition-delay: 0.1s;
             width: 9.5rem;
         }
         .firstnameHide{
-            transition-delay: 0.4s;
+            transition-delay: 0.1s;
             width: 1.2rem;
         }
         .firstnameShow{
@@ -85,7 +86,7 @@
             }
             .firstnameHide{
                 transition-delay: 0.4s;
-                width: 1.4rem;
+                width: 1.6rem;
             }
             .firstnameShow{
                 width: 6.5rem;

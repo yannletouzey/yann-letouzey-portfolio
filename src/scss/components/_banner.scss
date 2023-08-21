@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     transform-style: preserve-3d;
-    animation: spin 30s linear infinite;
+    animation: spin 240s linear infinite;
     font-family: 'SpaceMono-BoldItalic', monospace;
     text-transform: uppercase;
     @keyframes spin {
@@ -40,11 +40,9 @@
     }
     &__panel span {
       position: absolute;
-      transform: rotateY(var(--angle)) translateX(40rem) rotateY(-90deg)
-        scaleY(1.5) scaleX(1.2);
+      transform: rotateY(var(--angle)) translateX(40rem) rotateY(-90deg) scaleY(1.5) scaleX(1.2);
       @media screen and (min-width: 70rem) {
-        transform: rotateY(var(--angle)) translateX(60rem) rotateY(-90deg)
-          scaleY(1.8) scaleX(1.8);
+        transform: rotateY(var(--angle)) translateX(60rem) rotateY(-90deg) scaleY(1.8) scaleX(1.8);
       }
       &:hover {
         cursor: default;

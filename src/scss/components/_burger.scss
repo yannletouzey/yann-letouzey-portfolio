@@ -3,8 +3,14 @@
 .header__container{
     &.is-opened {
         transition-duration: var.$duration-animation-button-header;
-        transform: translateX(- calc(var.$sizes-cube * 3.5));
-    } 
+        transform: translateX(- calc(var.$sizes-cube * 5.5));
+    }
+    @media screen and (min-width: 39rem) {
+        &.is-opened {
+            transition-duration: var.$duration-animation-button-header;
+            transform: translateX(- calc(var.$sizes-cube * 6.5));
+        }
+    }
     &.is-closed {
         transition-duration: var.$duration-animation-button-header;
         transform: translateX(0);

@@ -1,13 +1,19 @@
 @use '../var';
 
 .button{
-  width: var.$width;
   display: flex;
   justify-content: space-around;
+  width: var.$width;
   @media screen and (min-width: 620px) {
-    width: 190%;
-    justify-content: space-between;
     position: absolute;
+    translate: 0 0;
+    width: 0;
+    &__prev {
+      translate: - (var.$width / 1.2) 0;
+    }
+    &__next {
+      translate: (var.$width / 1.2) 0;
+    }
   }
   &__btn {
     width: var.$size-btn;
