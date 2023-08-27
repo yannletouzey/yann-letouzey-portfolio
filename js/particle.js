@@ -1,28 +1,24 @@
-import { carousel } from "./carousel";
-import { utils } from "./utils";
-import { burger } from "./burger";
-import { animateStart } from "./animateStart";
+import strokeColor from './stroke.js';
+import color from './color.js';
+import lineWidth from './lineWidth.js';
+import setting from './setting.js'
 
-carousel();
-utils.spanText();
-utils.addSpanReverse("banner__panel");
-burger();
-animateStart();
 
-const canvas = document.querySelector('.canvas')
+const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
-const radius = 30
 canvas.width = window.innerWidth
 canvas.height = window.innerHeight
-ctx.strokeStyle = '#ceafafb5'
-ctx.lineWidth = 0.3
-ctx.fillStyle = '#0c0c0c'
+
+lineWidth(ctx)
+color(ctx)
+strokeColor(ctx)
+setting()
 
 class Particle {
     constructor(effect, index){
         this.effect = effect
         this.index = index
-        this.radius = Math.random() * radius + (radius / 4)
+        this.radius = Math.random() * 20 + (10 / 2)
         this.x = this.radius + Math.random() * (this.effect.width - this.radius * 2)
         this.y = this.radius + Math.random() * (this.effect.height - this.radius * 2)
         this.velocityX = Math.random() * 1 - 0.5
@@ -132,7 +128,7 @@ class Effect {
         })
     }
     connectParticle(context){
-        const maxDistance = 150
+        const maxDistance = 100
         for (let i = 0; i < this.particles.length; i++) {
             for (let j = 0; j < this.particles.length; j++) {
                 const distanceX = this.particles[i].x - this.particles[j].x
@@ -156,15 +152,30 @@ class Effect {
         this.canvas.height = this.height
         this.width = width
         this.height = height
-        ctx.strokeStyle = '#ceafafb5'
-        ctx.lineWidth = 0.3
-        ctx.fillStyle = '#0c0c0c'
+        // strokeColor(ctx)
+        // color(ctx)
+        // lineWidth(ctx)
         this.particles.forEach(particle => {
             particle.reset()
         })
     }
 }
+// const rangeParticle = document.getElementById('nbrParticle')
+// let nbrParticle = rangeParticle.value
+
+// const rangeSizeParticle = document.getElementById('sizeParticle')
+// let sizeParticle = rangeSizeParticle.value
+
 let effect = new Effect(canvas, ctx)
+
+// rangeParticle.oninput = function() {
+//     nbrParticle = this.value;
+//     effect = new Effect(canvas, nbrParticle, ctx, sizeParticle )
+// }
+// rangeSizeParticle.oninput = function() {
+//     sizeParticle = this.value;
+//     effect = new Effect(canvas, nbrParticle, ctx, sizeParticle )
+// }
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     effect.handleParticle(ctx)
