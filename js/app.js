@@ -111,7 +111,7 @@ class Effect {
         window.addEventListener('mousedown', (e) => {
             this.mouse.pressed = true
             this.mouse.x = e.x
-            this.mouse.y = e.y  
+            this.mouse.y = e.y
         })
         window.addEventListener('mouseup', (e) => {
             this.mouse.pressed = false

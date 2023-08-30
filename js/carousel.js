@@ -1,6 +1,6 @@
 import { dataCarousel } from "./data/dataCarousel";
 import { spin } from "./spin";
-import { utils } from './utils'
+console.log(dataCarousel.length);
 
 export const carousel = () => {
   const prevBtn = document.getElementById("prev");
@@ -11,7 +11,21 @@ export const carousel = () => {
   const degValue = 90; // 1/4 of lap
   let degrees = 0
   let current = 1
-
+//  cree ce html en js
+{/* <div id="container__carousel" class="container__carousel">
+      <div class="container__carousel--face" id="container__carousel--face"></div>
+      <div class="container__carousel--face"></div>
+      <div class="container__carousel--face"></div>
+      <div class="container__carousel--face"></div>
+      <div class="container__carousel--face hide"></div>
+      <div class="container__carousel--face hide"></div>
+      <div class="container__carousel--face hide"></div>
+      <div class="container__carousel--face hide"></div>
+      <div class="container__carousel--face hide"></div>
+      <div class="container__carousel--face hide"></div>
+      <div class="container__carousel--face hide"></div>
+      <div class="container__carousel-glow-ground" id="container__carousel-glow-ground"></div>
+  </div> */}
   prevBtn.addEventListener("click", () => {
     if (current > 1) {
       current--
