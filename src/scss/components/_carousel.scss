@@ -25,11 +25,22 @@
         position: relative;
         width: 99%;
         left: 50%;
-        transform: translateX(-50%);
+        translate: -50% 0;
         aspect-ratio: 16/9;
-        img{
+        overflow: hidden;
+        img {
+          opacity: 0.5;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          translate: -50% -50%;
+          opacity: 0.5;
           width: 100%;
           aspect-ratio: 16/9;
+          transition-duration: 0.5s;
+          &:hover {
+            scale: 1.2;
+          }
         }
       }
       &--tooltip {
@@ -111,7 +122,7 @@
           width: 2rem;
           height: 1rem;
           left: -1.95rem;
-          top: 0.65rem;
+          top: 0.9rem;
           border-radius: 0 0 1rem 0;
           box-shadow: 5px 5px 0 0 var.$background-color-carousel;
         }
