@@ -5,11 +5,9 @@ export const particle = () => {
     const radius = 30
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
-    ctx.strokeStyle = `#2c2c2c96`
+    ctx.strokeStyle = `#3f3f3f96`
     ctx.lineWidth = 1
     ctx.fillStyle = `${colorFillStyle}`
-    // ctx.fillStyle = `${colorFillStyle}`
-
     class Particle {
         constructor(effect, index){
             this.effect = effect

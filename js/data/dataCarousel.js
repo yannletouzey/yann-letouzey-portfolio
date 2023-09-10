@@ -9,7 +9,8 @@ export const dataCarousel = [
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Petite animation d'un cube créé en css3 et html5, sans JavaScript. En utilisant les keyframes css."
     },
     {
         id: 2,
@@ -22,7 +23,8 @@ export const dataCarousel = [
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Petite animation de plusieurs cubes créé en css3 et html5 et JavaScript. En utilisant les keyframes css."
     },
     {
         id: 3,
@@ -36,7 +38,8 @@ export const dataCarousel = [
             three: new URL("../../src/img/logos/three.png", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Texte créé en 3d avec Three.js. Exercice fait en formation sur three.js \"threejs journey\" de Bruno Simon."
     },
     {
         id: 4,
@@ -50,7 +53,8 @@ export const dataCarousel = [
             three: new URL("../../src/img/logos/three.png", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Petite animation créé en 3d avec Three.js. Exercice fait en formation sur three.js \"threejs journey\" de Bruno Simon."
     },
     {
         id: 5,
@@ -65,7 +69,8 @@ export const dataCarousel = [
             mysql: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", import.meta.url)
         },
         stack: "back-end",
-        inline: false
+        inline: false,
+        desc: "EasyTimeClock est une application web qui permet de gérer les heures d’entrée et de sortie dans une entreprise, une crèche ou toute sorte de lieu qui néccéssite une gestion de temps. C\’est une solution simple afin que son utilisation soit le plus intuitive et la plus complète possible. Pour plus d’informations sur le choix des différents modules afin d\'êtres le plus adapter à vos besoins, ou sur l’utilisation n’hésitez pas à visiter le site. "
     },
     {
         id: 6,
@@ -80,7 +85,8 @@ export const dataCarousel = [
             mysql: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", import.meta.url)
         },
         stack: "back-end",
-        inline: true
+        inline: true,
+        desc: "Pas encore de description"
     },
     {
         id: 7,
@@ -93,7 +99,8 @@ export const dataCarousel = [
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Pas encore de description"
     },
     {
         id: 8,
@@ -106,7 +113,8 @@ export const dataCarousel = [
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Pas encore de description"
     },
     {
         id: 9,
@@ -119,7 +127,8 @@ export const dataCarousel = [
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Pas encore de description"
     },
     {
         id: 10,
@@ -132,7 +141,8 @@ export const dataCarousel = [
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Pas encore de description"
     },
     {
         id: 11,
@@ -145,6 +155,21 @@ export const dataCarousel = [
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
         },
         stack: "front-end",
-        inline: true
+        inline: true,
+        desc: "Pas encore de description"
+    },
+    {
+        id: 12,
+        imgUrl: new URL("../../src/img/screenshot-website/fun-with-flags.png", import.meta.url),
+        title: "fun-with-flags",
+        link: "https://fun-with-flags.yann-letouzey.com/",
+        techno: {
+            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
+            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
+        },
+        stack: "front-end",
+        inline: true,
+        desc: "Un petit site créé lors de ma formation de développeur web. C'est un site avec une map du monde en svg et au survol de chaque pays quelques détails sur celui-ci apparissent dynamiquement."
     }
 ]

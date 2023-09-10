@@ -7,6 +7,7 @@ export const carousel = () => {
   const carousel = document.getElementById("container__carousel");
   const offsetFace = ((carousel.clientWidth / 2) / 16);
   const degValue = 90;
+
   let degrees = 0
   let current = 1
 
@@ -42,6 +43,14 @@ export const carousel = () => {
     const img = document.createElement('img')
     img.src = dataCarousel[index].imgUrl
     boxImg.append(img)
+    // img.addEventListener('mousemove', (e) => {
+    //   const widthImg = img.getBoundingClientRect().width
+    //   const widhtContainerImg = document.querySelector('.container__carousel--img').clientWidth
+    //   let moveX = (e.clientX / (widthImg - widhtContainerImg))
+    //   let x = e.clientX - img.getBoundingClientRect().left
+    //   console.log(moveX);
+    //   img.style.left = `-${x}px`
+    // })
 
     // Create div container => desc 
     const boxDesc = document.createElement('div')
@@ -80,14 +89,72 @@ export const carousel = () => {
     const tagStack = document.createElement('div')
     tagStack.classList.add('container__carousel--tagStack')
     tagStack.textContent = dataCarousel[index].stack
-    
-    if (!dataCarousel[index].inline) {
-      const tooltip = document.createElement('div')
-      tooltip.classList.add('container__carousel--tooltip')
-      tooltip.textContent = `${dataCarousel[index].title} n'est pas encore en ligne`
-      boxDesc.prepend(tooltip)
+
+    // Create button more info
+    const btnMoreInfo = document.createElement('button');
+    btnMoreInfo.classList.add('container__carousel--btnMoreInfo');
+
+    // hover sur toute la face quand le site n'est pas en ligne et seulement sur le bouton "en savoir plus" quand le site est en ligne
+    const tooltip = document.createElement('div')
+    tooltip.classList.add('container__carousel--tooltip')
+
+    const containerImgTooltip = document.createElement('div')
+    containerImgTooltip.classList.add('container__carousel--tooltip-imgTooltip')
+
+    const imgTooltip = document.createElement('img')
+    imgTooltip.src = dataCarousel[index].imgUrl
+
+    containerImgTooltip.append(imgTooltip)
+    tooltip.append(containerImgTooltip)
+
+    const linkTooltip = document.createElement('a')
+    linkTooltip.href = dataCarousel[index].link
+    linkTooltip.textContent = dataCarousel[index].title
+    linkTooltip.classList.add('container__carousel--tooltip-linkTooltip')
+    tooltip.append(linkTooltip)
+
+
+    const descTooltip = document.createElement('div')
+    descTooltip.classList.add('container__carousel--tooltip-descTooltip')
+    descTooltip.textContent = dataCarousel[index].desc
+    tooltip.append(descTooltip)
+
+    /**
+     * 
+     * @param {HTMLElement} trigger 
+     */
+    let btnMoreInfoActive = false;
+    const appearTooltip = (triggerOn, triggerOff) => {
+      triggerOn.addEventListener('mouseenter', () => {
+        btnMoreInfoActive = true
+        tooltip.style.transition = "0.4s";
+        tooltip.style.transform = "scale(1) translateY(0.5rem) translateX(-0.1rem)";
+        tooltip.style.borderRadius = "0";
+      })
+      triggerOff.addEventListener('mouseleave', () => {
+        tooltip.style.transform = "";
+        tooltip.style.borderRadius = `50%`;
+      })
     }
 
+    if (!dataCarousel[index].inline) {
+      appearTooltip(face, face)
+      linkTooltip.style.textDecoration = `line-through`
+      const msgNotOnline = document.createElement('div')
+      msgNotOnline.classList.add('container__carousel--tooltip-msgNotOnline')
+      msgNotOnline.textContent = `${dataCarousel[index].title} n'est pas encore en ligne`
+      tooltip.append(msgNotOnline)
+      linkTooltip.addEventListener('mouseenter', () => {
+        msgNotOnline.style.display = "block"
+      })
+      linkTooltip.addEventListener('mouseleave', () => {
+        msgNotOnline.style.display = "none"
+      })
+    } else {
+      appearTooltip(btnMoreInfo, face)
+      boxDesc.append(btnMoreInfo)
+    }
+    boxDesc.prepend(tooltip)
     boxDesc.append(linkDiv, technoBox, tagStack)
     face.append(boxImg, boxDesc)
   }
