@@ -43,14 +43,18 @@ export const carousel = () => {
     const img = document.createElement('img')
     img.src = dataCarousel[index].imgUrl
     boxImg.append(img)
-    // img.addEventListener('mousemove', (e) => {
-    //   const widthImg = img.getBoundingClientRect().width
-    //   const widhtContainerImg = document.querySelector('.container__carousel--img').clientWidth
-    //   let moveX = (e.clientX / (widthImg - widhtContainerImg))
-    //   let x = e.clientX - img.getBoundingClientRect().left
-    //   console.log(moveX);
-    //   img.style.left = `-${x}px`
-    // })
+    boxImg.addEventListener('mousemove', (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width * 100;
+      const y = (e.clientY - rect.top) / rect.height * 100;
+    
+      img.style.transformOrigin = `${x}% ${y}%`;
+      img.style.transform = `scale(1.5)`;
+    })
+    boxImg.addEventListener('mouseleave', (e) => {
+      img.style.transformOrigin = `center center`;
+      img.style.transform = `scale(1)`;
+    })
 
     // Create div container => desc 
     const boxDesc = document.createElement('div')
@@ -132,10 +136,17 @@ export const carousel = () => {
         tooltip.style.borderRadius = "0";
       })
       triggerOff.addEventListener('mouseleave', () => {
+        btnMoreInfoActive = false
         tooltip.style.transform = "";
         tooltip.style.borderRadius = `50%`;
       })
     }
+
+    face.addEventListener('click', () => {
+      if (btnMoreInfoActive) {
+        tooltip.style.transform = "";
+      }
+    })
 
     if (!dataCarousel[index].inline) {
       appearTooltip(face, face)
