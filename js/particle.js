@@ -7,7 +7,14 @@ export const particle = () => {
     canvas.height = window.innerHeight
     ctx.strokeStyle = `#3f3f3f96`
     ctx.lineWidth = 1
+//     const gradient = ctx.createRadialGradient(110, 90, 30, 100, 100, 70); 
+//     gradient.addColorStop(0, "pink");
+    // gradient.addColorStop(0.9, "white");
+    // gradient.addColorStop(1, "green");
+//     ctx.fillStyle = gradient
     ctx.fillStyle = `${colorFillStyle}`
+
+    // ctx.radialGradient(circle at top, colorFillStyle, #3f3f3f96); 
     class Particle {
         constructor(effect, index){
             this.effect = effect

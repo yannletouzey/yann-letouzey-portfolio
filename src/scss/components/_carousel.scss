@@ -35,10 +35,6 @@
           translate: -50% -50%;
           width: 100%;
           aspect-ratio: 16/9;
-          transition-duration: 0.5s;
-          &:hover {
-            scale: 1.2;
-          }
         }
       }
       &--tooltip {
