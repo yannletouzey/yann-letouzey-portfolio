@@ -49,10 +49,15 @@ export const carousel = () => {
       const y = (e.clientY - rect.top) / rect.height * 100;
     
       img.style.transformOrigin = `${x}% ${y}%`;
+      img.style.transitionProperty = 'transform';
+      img.style.transitionDuration = '0.5s';
       img.style.transform = `scale(1.5)`;
     })
     boxImg.addEventListener('mouseleave', (e) => {
-      img.style.transformOrigin = `center center`;
+      img.style.transitionDuration = '0.5s';
+      setTimeout(() => {
+        img.style.transformOrigin = `center center`;
+      }, 500)
       img.style.transform = `scale(1)`;
     })
 
