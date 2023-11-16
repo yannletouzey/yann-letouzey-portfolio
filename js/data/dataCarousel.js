@@ -24,7 +24,7 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Petite animation d'un cube créé en css3 et html5, sans JavaScript. En utilisant les keyframes css."
+        desc: "Petite animation d'un cube créé en CSS3 et HTML5, sans JavaScript. En utilisant les keyframes CSS3."
     },
     {
         id: 3,
@@ -38,25 +38,10 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Petite animation de plusieurs cubes créé en css3 et html5 et JavaScript. En utilisant les keyframes css."
+        desc: "Petite animation de plusieurs cubes créé en CSS3 et HTML5 et JavaScript. En utilisant les keyframes CSS3."
     },
     {
         id: 4,
-        imgUrl: new URL("../../src/img/screenshot-website/screenshot-yzey-3d.png", import.meta.url),
-        title: "webgl-3d-three.js",
-        link: "https://webgl-3d-text-five-tau.vercel.app/",
-        techno: {
-            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
-            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
-            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
-            three: new URL("../../src/img/logos/three.png", import.meta.url)
-        },
-        stack: "front-end",
-        inline: true,
-        desc: "Texte créé en 3d avec Three.js. Exercice fait en formation sur three.js \"threejs journey\" de Bruno Simon."
-    },
-    {
-        id: 5,
         imgUrl: new URL("../../src/img/screenshot-website/haunted-house.png", import.meta.url),
         title: "haunted-house",
         link: "https://haunted-house-blond-xi.vercel.app/",
@@ -71,7 +56,7 @@ export const dataCarousel = [
         desc: "Petite animation créé en 3d avec Three.js. Exercice fait en formation sur three.js \"threejs journey\" de Bruno Simon."
     },
     {
-        id: 6,
+        id: 5,
         imgUrl: new URL("../../src/img/screenshot-website/1440x900.png", import.meta.url),
         title: "easy-time-clock",
         link: "#",
@@ -84,10 +69,10 @@ export const dataCarousel = [
         },
         stack: "back-end",
         inline: false,
-        desc: "EasyTimeClock est une application web qui permet de gérer les heures d’entrée et de sortie dans une entreprise, une crèche ou toute sorte de lieu qui néccéssite une gestion de temps. C\’est une solution simple afin que son utilisation soit le plus intuitive et la plus complète possible. Pour plus d’informations sur le choix des différents modules afin d\'êtres le plus adapter à vos besoins, ou sur l’utilisation n’hésitez pas à visiter le site. "
+        desc: "EasyTimeClock est une application web qui permet de gérer les heures d'entrée et de sortie dans une entreprise, une crèche, ou tout autre lieu nécessitant une gestion du temps. C'est une solution simple, conçue pour une utilisation aussi intuitive et complète que possible. Pour plus d'informations sur le choix des différents modules afin d'être le plus adapté à vos besoins, ou sur l'utilisation, n'hésitez pas à visiter le site."
     },
     {
-        id: 7,
+        id: 6,
         imgUrl: new URL("../../src/img/screenshot-website/home-large.png", import.meta.url),
         title: "statistiques-covid",
         link: "https://www.statistiques-covid.com",
@@ -103,7 +88,7 @@ export const dataCarousel = [
         desc: "Pas encore de description"
     },
     {
-        id: 9,
+        id: 7,
         imgUrl: new URL("../../src/img/screenshot-website/cube-in-cube.png", import.meta.url),
         title: "cube-in-cube",
         link: "https://cube-in-cube.vercel.app",
@@ -117,7 +102,7 @@ export const dataCarousel = [
         desc: "Pas encore de description"
     },
     {
-        id: 10,
+        id: 8,
         imgUrl: new URL("../../src/img/screenshot-website/visuel-padding-margin.png", import.meta.url),
         title: "padding-margin-css",
         link: "https://visual-padding-margin-css.vercel.app/",
@@ -131,7 +116,7 @@ export const dataCarousel = [
         desc: "Pas encore de description"
     },
     {
-        id: 11,
+        id: 9,
         imgUrl: new URL("../../src/img/screenshot-website/build-cube-css.png", import.meta.url),
         title: "build-cube-css",
         link: "https://build-cube-css.vercel.app/",
@@ -142,10 +127,10 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Pas encore de description"
+        desc: "Petite animation d'un cube créé en CSS3, HTML5 et JavaScript, en utilisant les keyframes CSS. Ce projet existe pour montrer la possibilité de créer un cube 3D avec des propriétés CSS."
     },
     {
-        id: 12,
+        id: 10,
         imgUrl: new URL("../../src/img/screenshot-website/cardiac-cohesion.png", import.meta.url),
         title: "cardiac-cohesion",
         link: "https://cardiac-cohesion.vercel.app/",
@@ -156,20 +141,6 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Pas encore de description"
-    },
-    {
-        id: 13,
-        imgUrl: new URL("../../src/img/screenshot-website/fun-with-flags.png", import.meta.url),
-        title: "fun-with-flags",
-        link: "https://fun-with-flags.yann-letouzey.com/",
-        techno: {
-            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
-            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
-            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url)
-        },
-        stack: "front-end",
-        inline: true,
-        desc: "Un petit site créé lors de ma formation de développeur web. C'est un site avec une map du monde en svg et au survol de chaque pays quelques détails sur celui-ci apparaissent dynamiquement."
+        desc: "Petit side project réalisé pendant la formation Oclock pour mettre en pratique les notions de JavaScript que je venais d'apprendre."
     }
 ]
