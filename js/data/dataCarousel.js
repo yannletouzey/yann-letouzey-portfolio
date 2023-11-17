@@ -11,7 +11,8 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Portfolio de Selim DM. Un potographe de qualité."
+        desc: "Portfolio de Selim DM. Un potographe de qualité.",
+        seriousProject: true
     },
     {
         id: 2,
@@ -24,7 +25,8 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Petite animation d'un cube créé en CSS3 et HTML5, sans JavaScript. En utilisant les keyframes CSS3."
+        desc: "Petite animation d'un cube créé en CSS3 et HTML5, sans JavaScript. En utilisant les keyframes CSS3.",
+        seriousProject: true
     },
     {
         id: 3,
@@ -38,7 +40,8 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Petite animation de plusieurs cubes créé en CSS3 et HTML5 et JavaScript. En utilisant les keyframes CSS3."
+        desc: "Petite animation de plusieurs cubes créé en CSS3 et HTML5 et JavaScript. En utilisant les keyframes CSS3.",
+        seriousProject: true
     },
     {
         id: 4,
@@ -53,7 +56,8 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Petite animation créé en 3d avec Three.js. Exercice fait en formation sur three.js \"threejs journey\" de Bruno Simon."
+        desc: "Petite animation créé en 3d avec Three.js. Exercice fait en formation sur three.js \"threejs journey\" de Bruno Simon.",
+        seriousProject: true
     },
     {
         id: 5,
@@ -69,7 +73,8 @@ export const dataCarousel = [
         },
         stack: "back-end",
         inline: false,
-        desc: "EasyTimeClock est une application web qui permet de gérer les heures d'entrée et de sortie dans une entreprise, une crèche, ou tout autre lieu nécessitant une gestion du temps. C'est une solution simple, conçue pour une utilisation aussi intuitive et complète que possible. Pour plus d'informations sur le choix des différents modules afin d'être le plus adapté à vos besoins, ou sur l'utilisation, n'hésitez pas à visiter le site."
+        desc: "EasyTimeClock est une application web qui permet de gérer les heures d'entrée et de sortie dans une entreprise, une crèche, ou tout autre lieu nécessitant une gestion du temps. C'est une solution simple, conçue pour une utilisation aussi intuitive et complète que possible. Pour plus d'informations sur le choix des différents modules afin d'être le plus adapté à vos besoins, ou sur l'utilisation, n'hésitez pas à visiter le site.",
+        seriousProject: true
     },
     {
         id: 6,
@@ -85,7 +90,8 @@ export const dataCarousel = [
         },
         stack: "back-end",
         inline: true,
-        desc: "Pas encore de description"
+        desc: "Pas encore de description",
+        seriousProject: true
     },
     {
         id: 7,
@@ -99,7 +105,8 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Pas encore de description"
+        desc: "Pas encore de description",
+        seriousProject: true
     },
     {
         id: 8,
@@ -113,7 +120,8 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Pas encore de description"
+        desc: "Pas encore de description",
+        seriousProject: true
     },
     {
         id: 9,
@@ -127,7 +135,8 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Petite animation d'un cube créé en CSS3, HTML5 et JavaScript, en utilisant les keyframes CSS. Ce projet existe pour montrer la possibilité de créer un cube 3D avec des propriétés CSS."
+        desc: "Petite animation d'un cube créé en CSS3, HTML5 et JavaScript, en utilisant les keyframes CSS. Ce projet existe pour montrer la possibilité de créer un cube 3D avec des propriétés CSS.",
+        seriousProject: true
     },
     {
         id: 10,
@@ -141,6 +150,23 @@ export const dataCarousel = [
         },
         stack: "front-end",
         inline: true,
-        desc: "Petit side project réalisé pendant la formation Oclock pour mettre en pratique les notions de JavaScript que je venais d'apprendre."
+        desc: "Petit side project réalisé pendant la formation Oclock pour mettre en pratique les notions de JavaScript que je venais d'apprendre.",
+        seriousProject: true
+    },
+    {
+        id: 11,
+        imgUrl: new URL("../../src/img/screenshot-website/trouve-ta-ville.png", import.meta.url),
+        title: "trouve-ta-ville",
+        link: "https://trouve-ta-ville.yann-letouzey.com/",
+        techno: {
+            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
+            css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
+            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", import.meta.url)
+        },
+        stack: "front-end",
+        inline: true,
+        desc: "Petit project réalisé pendant la formation Oclock pour mettre en pratique les notions de REACT du jour.",
+        seriousProject: true
     }
 ]
