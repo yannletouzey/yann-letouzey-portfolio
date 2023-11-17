@@ -26,7 +26,7 @@ export const carousel = () => {
 
   const allFaces = document.querySelectorAll(".container__carousel--face");  
   const projectTest = [];
-  const technoImg = ['html','css','js','three','mysql','php','node','express']
+  const technoImg = ['html', 'css', 'js', 'three', 'mysql', 'php', 'node', 'express', 'react', 'postgres']
   for (let index = 0; index < dataCarousel.length; index++) {
     const face = allFaces[index];
     const newDegValue = degValue * index;
@@ -85,10 +85,15 @@ export const carousel = () => {
       const technoBox =  document.createElement('div')
       technoBox.classList.add('container__carousel--techno')
       technoImg.forEach(technoImgElement => {
+        console.log(technoImgElement);
         if (dataCarousel[index].techno[technoImgElement]) {
+          const imgTechnoContainer = document.createElement('div')
+          imgTechnoContainer.classList.add('container__carousel--techno--containerImgTechno')
+          technoBox.append(imgTechnoContainer)
           const img = document.createElement('img')
           img.src = dataCarousel[index].techno[technoImgElement]
-          technoBox.append(img)
+          imgTechnoContainer.append(img)
+          imgTechnoContainer.style.setProperty('--after-content', "'" + technoImgElement + "'")
         }
       })
 

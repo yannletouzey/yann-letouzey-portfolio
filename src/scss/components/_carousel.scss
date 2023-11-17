@@ -224,12 +224,12 @@
         transform: rotateX(90deg) translateX(-50%) translateZ(-14rem);
         box-shadow: 0px 0px 30px 35px #fff;
       }
-      &--techno {
-        img:hover {
-          scale: 1.2;
-          // box-shadow: 7px 7px 10px 10px rgba(0,0,0,0.1);
-        }
-      }
+      // &--techno {
+      //   img:hover {
+      //     scale: 1.2;
+      //     // box-shadow: 7px 7px 10px 10px rgba(0,0,0,0.1);
+      //   }
+      // }
     }
     .hide{
       display: none;

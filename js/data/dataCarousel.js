@@ -65,7 +65,6 @@ export const dataCarousel = [
         title: "easy-time-clock",
         link: "#",
         techno: {
-            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
             php: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", import.meta.url),
@@ -82,7 +81,6 @@ export const dataCarousel = [
         title: "statistiques-covid",
         link: "https://www.statistiques-covid.com",
         techno: {
-            html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
             php: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg", import.meta.url),
@@ -155,6 +153,22 @@ export const dataCarousel = [
     },
     {
         id: 11,
+        imgUrl: new URL("../../src/img/screenshot-website/easy-mailing/accueil.png", import.meta.url),
+        title: "easy-mailing",
+        link: "#",
+        techno: {
+            react: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", import.meta.url),
+            node: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", import.meta.url),
+            express: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", import.meta.url),
+            postgres: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", import.meta.url)
+        },
+        stack: "full-stack",
+        inline: true,
+        desc: "Petit project réalisé pendant la formation Oclock pour mettre en pratique les notions de REACT, NODE, POSTGRES, tous les concepts liés au développement d'une api coté back et un front indépendent. Avec ce projet, on a pu découvrir touts les avantages et contraintes imposés par le travail en groupes avec une date de rendu finale.",
+        seriousProject: true
+    },
+    {
+        id: 12,
         imgUrl: new URL("../../src/img/screenshot-website/trouve-ta-ville.png", import.meta.url),
         title: "trouve-ta-ville",
         link: "https://trouve-ta-ville.yann-letouzey.com/",
@@ -162,7 +176,7 @@ export const dataCarousel = [
             html: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg", import.meta.url),
             css: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg", import.meta.url),
             js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", import.meta.url),
-            js: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", import.meta.url)
+            react: new URL("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", import.meta.url)
         },
         stack: "front-end",
         inline: true,
