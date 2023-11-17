@@ -89,8 +89,9 @@
           background-color: #fff;
           padding: 0.5rem;
           border-radius: 0.5rem;
-          min-width: 18rem;
+          // min-width: 18rem;
           text-align: center;
+          text-wrap: nowrap;
           &::before {
             content: "";
             position: absolute;
@@ -212,11 +213,6 @@
         height: var.$height;
         transform-style: preserve-3d;
         border: 1px solid var.$border-color-carousel;
-        // &:hover .container__carousel--tooltip{
-        //   transition: 0.4s;
-        //   transform: scale(1) translateY(0.5rem) translateX(-0.1rem);
-        //     border-radius: 0;
-        // }
       }
       &-glow-ground {
         position: absolute;
