@@ -3,13 +3,24 @@ import { utils } from "./utils";
 import { burger } from "./burger";
 import { animateStart } from "./animateStart";
 import { particle } from "./particle";
+import confetti from "./confetti";
 
-const logoOne = document.getElementById('cube-one');
-const logoTwo = document.getElementById('cube-two');
-const logoThree = document.getElementById('cube-three');
-logoOne.addEventListener('mouseenter', () => {utils.createConfetti(logoOne)})
-logoTwo.addEventListener('mouseenter', () => {utils.createConfetti(logoTwo)})
-logoThree.addEventListener('mouseenter', () => {utils.createConfetti(logoThree)})
+// confetti to hover logo contact
+const logo = document.querySelectorAll('.header__menu--cube');
+for (const iterator of logo) {
+    iterator.addEventListener('mouseenter', () => {confetti.createConfetti(iterator)})
+}
+
+// confetti to hover button
+
+// const leftButton =document.getElementById('arrow-prev');
+// const rightButton =document.getElementById('arrow-next');
+// leftButton.addEventListener('mouseenter', () => {setTimeout(() => {
+//     utils.createConfettiButton(leftButton, 'prev', -2)
+// }, 300);})
+// rightButton.addEventListener('mouseenter', () => {setTimeout(() => {
+//     utils.createConfettiButton(rightButton, 'next', 2)
+// }, 300);})
 
 carousel();
 utils.spanText();
